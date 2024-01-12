@@ -1,8 +1,8 @@
 /* Стили для welcome страницы дашборда с кнопками в виде изображений */
 
 body {
+  background: linear-gradient(to right, #ce16e3, #00f1c3);
   font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -40,5 +40,5 @@ body {
 }
 
 .button:hover img {
-  transform: scale(1.1); /* Увеличиваем размер при наведении */
+  transform: scale(1.5); /* Увеличиваем размер при наведении */
 }

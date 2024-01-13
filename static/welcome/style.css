@@ -1,0 +1,44 @@
+/* Стили для welcome страницы дашборда с кнопками в виде изображений */
+
+body {
+  background: linear-gradient(to right, #ce16e3, #00f1c3);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 0; /* Убираем внутренние отступы */
+  text-align: center;
+}
+
+.button img {
+  width: 150px; /* Устанавливаем ширину изображения */
+  height: auto; /* Поддерживаем пропорции */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.button:hover img {
+  transform: scale(1.5); /* Увеличиваем размер при наведении */
+}

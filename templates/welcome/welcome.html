@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Your Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='welcome/style.css') }}">
 </head>
 <body>
   <div class="container">
     <h1 class="title">Добро пожаловать на ваш дашборд!</h1>
     <p class="subtitle">Начнем работу вместе.</p>
       <a href="{{ url_for('main') }}" class="button">
-        <img src="{{ url_for('static', filename='start.png') }}" alt="Перейти к дашборду">
+        <img src="{{ url_for('static', filename='welcome/start.png') }}" alt="Перейти к дашборду">
       </a>
   </div>
 </body>

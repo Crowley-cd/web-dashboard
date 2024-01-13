@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
+# Временно: переменные хранятся здесь
+WEATHER_API_KEY = "f50b7f6ae44f8a3ca4f85e88307e6560"
 
 @app.route('/')
 def welcome_page():
@@ -26,8 +28,8 @@ def process_form():
 
 @app.route('/get_weather', methods=['POST'])
 def get_weather():
-    city = request.form.get('city')
-
+    #city = request.form.get('city')
+    city = 'Rostov-on-Don'
     if not city:
         return jsonify({'status': 'error', 'message': 'Please provide a city name'})
 
@@ -40,6 +42,7 @@ def get_weather():
         temperature = weather_data['main']['temp']
         description = weather_data['weather'][0]['description']
 
+        # TODO: Температура по Фаренгейту, необходимо менять на цельсии . Дескрипшн тоже нужно править
         return jsonify({'status': 'success', 'temperature': temperature, 'description': description})
     else:
         return jsonify({'status': 'error', 'message': 'Failed to retrieve weather data'})
@@ -47,4 +50,5 @@ def get_weather():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(debug=True)
+    get_weather()
